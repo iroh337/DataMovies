@@ -54,8 +54,9 @@ async function getDataMovies(){
         result.innerHTML += `
         <div class="movies movie-${i}" style="position:relative;">
             <img src="https://image.tmdb.org/t/p/w300/${data.results[i].poster_path}">
-            <a style="position:absolute;" href="https://www.youtube.com/?bp=wgUCEAE%3D"></a>
+            <a style="position:absolute;" target="_blank" href="https://www.youtube.com/results?search_query=${data.results[i].original_title}"></a>
         </div>
         `
     }
 }
+
