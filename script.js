@@ -28,7 +28,7 @@ function init(pop_data) {
         other_movies.innerHTML += `
         <div class="movies movie-${i}" style="position:relative;">
             <img src="https://image.tmdb.org/t/p/w300/${pop_data.results[i].poster_path}">
-            <a style="position:absolute;" href="./details/details.html"></a>
+            <a target="_blank" style="position:absolute;" href="https://www.youtube.com/results?search_query=${pop_data.results[i].original_title}"></a>
         </div>
         `
     }

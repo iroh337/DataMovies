@@ -150,6 +150,8 @@ body{
 
 .movies img {
     position: relative;
+    transition: 0.3s ease-in-out;
+    transform: scale(1);
 }
 
 .movies a {
@@ -159,4 +161,14 @@ body{
     width: 100%;
     text-align: center;
     height: 100%;
+    z-index: 0;
+}
+
+
+.movies h1:hover {
+    opacity: 1;
+}
+
+.carousel-inner.active{
+    
 }
