@@ -45,6 +45,7 @@ body{
 }
 
 .init-posters {
+    position: relative;
     margin-top: 100px;
     border-radius: 20px;
     width: 500px;
@@ -105,6 +106,10 @@ body{
 
 }
 
+.logo {
+    width: 100px;
+}
+
 .result {
     display: flex;
     flex-wrap: wrap;
@@ -121,3 +126,37 @@ body{
     
 }
 
+.linkimage {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:center ;
+
+}
+
+.linkimage a {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    
+}
+
+.movies {
+    position: relative;
+}
+
+.movies img {
+    position: relative;
+}
+
+.movies a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+}
