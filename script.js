@@ -20,6 +20,7 @@ async function pushJson(){
 }  
 
 
+
 function init(pop_data) {
     const other_movies = document.querySelector(".other-movies")
     other_movies.innerHTML=''
@@ -28,7 +29,7 @@ function init(pop_data) {
         other_movies.innerHTML += `
         <div class="movies movie-${i}" style="position:relative;">
             <img src="https://image.tmdb.org/t/p/w300/${pop_data.results[i].poster_path}">
-            <a target="_blank" style="position:absolute;" href="https://www.youtube.com/results?search_query=${pop_data.results[i].original_title}"></a>
+            <a style="position:absolute;" target="_blank" href="./details/details.html?idmovie=${pop_data.results[i].id}"></a>
         </div>
         `
     }
@@ -54,9 +55,17 @@ async function getDataMovies(){
         result.innerHTML += `
         <div class="movies movie-${i}" style="position:relative;">
             <img src="https://image.tmdb.org/t/p/w300/${data.results[i].poster_path}">
-            <a style="position:absolute;" target="_blank" href="https://www.youtube.com/results?search_query=${data.results[i].original_title}"></a>
+            <a style="position:absolute;" target="_blank" href="./details/details.html?idmovie=${data.results[i].id}"></a>
         </div>
         `
+    }
+    if (data.results.length === 0){
+        result.innerHTML = `<div class="spinner-border" role="status">
+        <span class="sr-only"></span>
+        </div>`
+        setTimeout(function() {
+            result.innerHTML = "<h1>Movie not Found</h1>"
+        }, 1500);
     }
 }
 
