@@ -51,3 +51,34 @@ body{
 .span-original-title {
     font-weight: 400;
 }
+
+@media (max-width:800px){
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container{
+        width: 400px;
+        padding: 8%;
+    }
+    .container img{
+        width: 200px;
+    }
+}
+
+@media (max-width:500px){
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container{
+        width: 400px;
+        margin: 0;
+        padding: 30px;
+    }
+    .container img{
+        width: 200px;
+    }
+}
