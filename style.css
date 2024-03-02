@@ -166,11 +166,8 @@ body{
 
 
 @media (max-width:960px){
-
-
     .header{
         width: 100%;
-        padding-right: 100px;
     }
 
     .other-movies {
