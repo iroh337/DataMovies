@@ -17,11 +17,10 @@ body{
 
 }
 
-.logo {
-   position: absolute;
-   top: 10px;
-   left: 10px;
+.nav-links {
+    display: flex;
 }
+
 
 .nav-links ul {
     display: flex;
@@ -40,11 +39,24 @@ body{
 
 
 .header {
+    position: relative;
+    width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: row;
 }
 
 
+
+.logo {
+    align-self: left;
+    font-size: 40px;
+    font-weight: 800;
+    color: chocolate;
+    text-align: left;
+    margin: auto;
+}
 
 
 .init-posters {
@@ -64,7 +76,7 @@ body{
 }
 
 .div-search input {
-    width: 30%;
+    width: 50%;
     outline: none;
     border-color: rgb(0, 0, 0);
     border-radius: 10px;
@@ -107,10 +119,6 @@ body{
     border-radius: 10px;
     cursor: pointer;
 
-}
-
-.logo {
-    width: 100px;
 }
 
 .result {
@@ -167,11 +175,43 @@ body{
     z-index: 0;
 }
 
-
 .movies h1:hover {
     opacity: 1;
 }
 
-.carousel-inner.active{
-    
+
+@media (max-width: 500px){
+    body{
+        width: 380px;
+        margin: auto;
+    }
+
+    .logo {
+        text-align: center;
+        justify-self: center;
+        font-size: 25px;
+    }
+
+    .header {
+        width: 380px;
+        justify-content: center;
+    }
+
+    .other-movies {
+        margin: auto;
+        width: 380px;
+    }
+
+    .nav-links {
+        display:none;
+    }
+    .div-search {
+        min-width: none;
+        width: 300px;
+    }
+    .div-search .input{
+        align-self: center;
+        min-width: none;
+        width: 100%;
+    }
 }
