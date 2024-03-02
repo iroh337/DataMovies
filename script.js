@@ -29,7 +29,7 @@ function init(pop_data) {
         other_movies.innerHTML += `
         <div class="movies movie-${i}" style="position:relative;">
             <img src="https://image.tmdb.org/t/p/w300/${pop_data.results[i].poster_path}">
-            <a style="position:absolute;" target="_blank" href="./details/details.html?idmovie=${pop_data.results[i].id}"></a>
+            <a style="position:absolute;" href="./details/details.html?idmovie=${pop_data.results[i].id}"></a>
         </div>
         `
     }
@@ -55,7 +55,7 @@ async function getDataMovies(){
         result.innerHTML += `
         <div class="movies movie-${i}" style="position:relative;">
             <img src="https://image.tmdb.org/t/p/w300/${data.results[i].poster_path}">
-            <a style="position:absolute;" target="_blank" href="./details/details.html?idmovie=${data.results[i].id}"></a>
+            <a style="position:absolute;" href="./details/details.html?idmovie=${data.results[i].id}"></a>
         </div>
         `
     }
