@@ -6,40 +6,19 @@
 }
 
 body{
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: #f3f3f7;
     align-items: center;
     box-sizing: border-box;
-
 }
-
-.nav-links {
-    display: flex;
-}
-
-
-.nav-links ul {
-    display: flex;
-    gap: 100px;
-}
-
-.nav-links ul li {
-    list-style: none;
-}
-
-.nav-links ul li a{
-    display: flex;
-    text-decoration: none;
-    outline: none;
-}
-
 
 .header {
+    background-color: #18181b;
     position: relative;
+    padding: 30px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -48,48 +27,70 @@ body{
 }
 
 
+.nav-links {
+    display: flex;
+}
+
+
+.nav-links ul {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links ul li {
+    list-style: none;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    text-decoration: none;
+    outline: none;
+}
 
 .logo {
     align-self: left;
     font-size: 40px;
     font-weight: 800;
-    color: chocolate;
+    color: rgb(36, 32, 28);
     text-align: left;
     margin: auto;
-}
-
-
-.init-posters {
-    position: relative;
-    margin-top: 100px;
-    border-radius: 20px;
-    width: 500px;
+    background-color: chocolate;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .div-search {
+    background-color: #18181b;
     display: flex;
     width: 100%;
-    gap: 10px;
     text-align: center;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .div-search input {
+    font-family: 'Poppins'sans-serif; 
     width: 50%;
     outline: none;
     border-color: rgb(0, 0, 0);
-    border-radius: 10px;
+    border-radius: 10px 0px 0px 10px;
     border-width: 2px;
-    padding: 5px;
+    padding: 10px;
+    outline: none;
+    border: none;
     
 }
 
 .div-search button {
-    padding: 4px;
+    padding: 10px;
+    border: 0;
+    outline: none;
     background-color: orange;
     border: 0;
-    border-radius: 5px;
+    border-radius: 0px 5px 5px 0px;
     color: #18181b;
     cursor: pointer;
     transition: 0.2s;
@@ -108,7 +109,6 @@ body{
 .other-movies {
     display: flex;
     flex-wrap: wrap;
-    
     justify-content: center;
     margin-top: 100px;
     width: 1200px;
@@ -124,34 +124,19 @@ body{
 .result {
     display: flex;
     flex-wrap: wrap;
-    
     justify-content: center;
     margin-top: 100px;
     width: 1200px;
 }
 .result img {
+    background-image: url("https://lightwidget.com/wp-content/uploads/localhost-file-not-found.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 370px;
     width: 300px;
     margin: 10px;
     border-radius: 10px;
     cursor: pointer;
-    
-}
-
-.linkimage {
-    position: relative;
-    width: 500px;
-    height: 300px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position:center ;
-
-}
-
-.linkimage a {
-    position: absolute;
-    width: 500px;
-    height: 300px;
-    text-align: center;
     
 }
 
@@ -162,48 +147,79 @@ body{
 .movies img {
     position: relative;
     transition: 0.3s ease-in-out;
-    transform: scale(1);
+    min-width: 300px;
+    min-height: 440px;
 }
 
 .movies a {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     text-align: center;
     height: 100%;
+    width: calc(310px);
     z-index: 0;
 }
 
-.movies h1:hover {
-    opacity: 1;
-}
 
+@media (max-width: 800px){
+    body{
+        width: 100%;
+        margin: auto;
+    }
+
+    .div-search  .input{
+        width: 100%;
+    }
+
+    .header {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        justify-content: center;
+    }
+    .other-movies {
+        margin: auto;
+        width: 380px;
+    }
+    .result {
+        margin: auto;
+        width: 380px;
+    }
+}
 
 @media (max-width: 500px){
     body{
-        width: 380px;
+        width: 100%;
         margin: auto;
     }
 
     .logo {
         text-align: center;
         justify-self: center;
-        font-size: 25px;
+        font-size: 40px;
     }
 
     .header {
-        width: 380px;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
         justify-content: center;
     }
-
     .other-movies {
         margin: auto;
         width: 380px;
     }
 
-    .nav-links {
-        display:none;
+    
+
+    .result {
+        margin: auto;
+        width: 380px;
+    }
+    .result a{
+        margin: 10px;
+        width: 300px;
     }
     .div-search {
         min-width: none;
@@ -211,7 +227,68 @@ body{
     }
     .div-search .input{
         align-self: center;
-        min-width: none;
         width: 100%;
+    }
+}
+
+@media (max-width: 380px){
+    header {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin: 0;
+        justify-content: center;
+    }
+
+    .logo{
+        font-size: 30px;
+    }
+    .div-search {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .div-search .input {
+        width: 100%;
+        padding: 4px;
+    }
+    .div-search button{
+        padding: 4px;
+    }
+    .other-movies {
+        margin-top: 20px;
+        width: 80%;
+    }
+    .other-movies a{
+        width: 90%;
+        margin-bottom:10px ;
+    }
+    .other-movies img{
+        width: 90%;
+        min-width: 100px;
+
+    }
+    .movies {
+        width: 270px;
+    }
+
+    .result {
+        margin-top:20px ;
+        gap: 20px;
+        justify-content: center;
+        width: 80%;
+    }
+    .result a {
+        width: 80%;
+    }
+
+    .result img{
+        margin: 0;
+        width: 90%;
+        min-width: 240px;
+
+    }
+
+    .result .movies {
+        width: 270px;
     }
 }

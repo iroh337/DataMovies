@@ -49,12 +49,11 @@ async function getDataMovies(){
     result.innerHTML = ''
     
     console.log(data)
-    
     other_movies.style.display = 'none'
     for( var i = 0 ; i < data.results.length-3 ; i++){
         result.innerHTML += `
         <div class="movies movie-${i}" style="position:relative;">
-            <img src="https://image.tmdb.org/t/p/w300/${data.results[i].poster_path}">
+            <img id="img-movies" src="https://image.tmdb.org/t/p/w300/${data.results[i].poster_path}" alt="${data.results[i].title}">
             <a style="position:absolute;" href="./details/details.html?idmovie=${data.results[i].id}"></a>
         </div>
         `
@@ -67,5 +66,6 @@ async function getDataMovies(){
             result.innerHTML = "<h1>Movie not Found</h1>"
         }, 1500);
     }
+
 }
 
