@@ -46,9 +46,9 @@ async function getDataMovies(){
     const result = document.querySelector('.result')
     result.innerHTML = ''
     
-    // console.log(data)
+    console.log(data)
     other_movies.style.display = 'none'
-    for( var i = 0 ; i < data.results.length-3 ; i++){
+    for( var i = 0 ; i < data.results.length ; i++){
         result.innerHTML += `
         <div class="movies movie-${i}" style="position:relative;">
             <img id="img-movies" src="https://image.tmdb.org/t/p/w300/${data.results[i].poster_path}" alt="${data.results[i].title}">
