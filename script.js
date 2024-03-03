@@ -1,5 +1,3 @@
-
-var apiKEYinfo = "80d4ba0b"
 var imgAPI = "https://image.tmdb.org/t/p/w280"
 var  apiKeyTmdb = "e6a8c3a735702cbd286b2abcb9d6dc1a"
 var searchURL =  `https://api.themoviedb.org/3/search/movie?api_key=${apiKeyTmdb}&query=`
@@ -48,7 +46,7 @@ async function getDataMovies(){
     const result = document.querySelector('.result')
     result.innerHTML = ''
     
-    console.log(data)
+    // console.log(data)
     other_movies.style.display = 'none'
     for( var i = 0 ; i < data.results.length-3 ; i++){
         result.innerHTML += `

@@ -6,3 +6,10 @@
 
 
 Efetuado no [Netfly](https://www.netlify.com/RL). Para visualizar: <a href="https://iroh-movies.netlify.app/">Clique Aqui</a>.
+
+
+
+API utilizada - [ITMDB](https://developer.themoviedb.org/docs/getting-started)
+
+
+
