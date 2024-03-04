@@ -67,3 +67,8 @@ async function getDataMovies(){
 
 }
 
+input.addEventListener("keyup", (event) => {
+    if(event.key === "Enter"){
+        getDataMovies()
+    }
+})

@@ -55,10 +55,10 @@ body{
     align-self: left;
     font-size: 40px;
     font-weight: 800;
-    color: rgb(36, 32, 28);
+    color: rgb(211, 100, 10);
     text-align: left;
     margin: auto;
-    background-color: chocolate;
+    /* background-color: rgb(255, 119, 0); */
     padding: 5px;
     border-radius: 10px;
 }
@@ -113,7 +113,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     margin: 0;
-    margin-top: 100px;
+    margin-top: 50px;
     width: 1200px;
 }
 .other-movies img {
@@ -228,7 +228,10 @@ body{
         width: 380px;
     }
 
-    
+    .movies img{
+    min-height: none;
+
+    }
 
     .result {
         margin: auto;
@@ -255,6 +258,11 @@ body{
         gap: 10px;
         margin: 0;
         justify-content: center;
+    }
+
+    .movies img {
+    min-height: 0px;
+
     }
 
     .logo{
