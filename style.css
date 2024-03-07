@@ -3,10 +3,10 @@
 
 * {
     margin: 0;
-    font-family: 'Poppins', sans-serif ;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     padding: 0px;
     margin: 0px;
     width: 100%;
@@ -43,13 +43,14 @@ body{
     list-style: none;
 }
 
-.nav-links ul li a{
+.nav-links ul li a {
     color: #fff;
     font-weight: 500;
     display: flex;
     text-decoration: none;
     outline: none;
 }
+
 
 .logo {
     align-self: left;
@@ -74,7 +75,7 @@ body{
 }
 
 .div-search input {
-    font-family: 'Poppins'sans-serif; 
+    font-family: 'Poppins'sans-serif;
     width: 50%;
     outline: none;
     border-color: rgb(0, 0, 0);
@@ -83,7 +84,7 @@ body{
     padding: 10px;
     outline: none;
     border: none;
-    
+
 }
 
 .div-search button {
@@ -97,15 +98,21 @@ body{
     cursor: pointer;
     transition: 0.2s;
 }
+
 .div-search button:hover {
     background-color: rgb(255, 175, 28);
     color: white;
 
 }
+
 .div-search button:active {
     background-color: rgb(250, 225, 179);
     color: #fff;
     transform: translateY(5px);
+}
+
+.show-search {
+    display: none;
 }
 
 .other-movies {
@@ -116,12 +123,12 @@ body{
     margin-top: 50px;
     width: 1200px;
 }
+
 .other-movies img {
     width: 300px;
     margin: 10px;
     border-radius: 10px;
     cursor: pointer;
-
 }
 
 .result {
@@ -131,6 +138,7 @@ body{
     margin-top: 100px;
     width: 1200px;
 }
+
 .result img {
     background-image: url("https://lightwidget.com/wp-content/uploads/localhost-file-not-found.jpg");
     background-position: center;
@@ -140,7 +148,7 @@ body{
     margin: 10px;
     border-radius: 10px;
     cursor: pointer;
-    
+
 }
 
 .movies {
@@ -165,29 +173,69 @@ body{
 }
 
 
-@media (max-width:960px){
-    .header{
+@media (max-width:960px) {
+    .header {
         width: 100%;
     }
 
     .other-movies {
         width: 700px;
     }
+
     .result {
         width: 700px;
     }
+
+    
+
 }
 
 
-@media (max-width: 800px){
-    body{
+@media (max-width: 800px) {
+    body {
         width: 100%;
         margin: auto;
     }
 
-    .div-search  .input{
+    .show-search {
+        display: flex;
+        
+    }
+
+    .show-search.active{
+        background-color: transparent;
+        border: 0;
+        font-family: 'Poppins'sans-serif;
+        font-weight: 500;
+        color: #fff;
+    }
+    
+    .show-search img {
+        justify-self: center;
+        align-self: center;
+        margin-top:2px ;
+        width: 20px;
+        border: 0;
+        filter: invert(100%);
+        
+    }
+
+    .div-search {
+        display: none;
+        transition: all 1s ease-in-out;
+        opacity: 0;
+    }
+
+    .div-search.active {
+        display: flex;
+        transition: all 1s ease-in-out;
+        opacity: 1;
+    }
+
+    .div-search .input {
         width: 100%;
     }
+
 
     .header {
         flex-direction: column;
@@ -195,18 +243,20 @@ body{
         gap: 10px;
         justify-content: center;
     }
+
     .other-movies {
         margin: auto;
         width: 380px;
     }
+
     .result {
         margin: auto;
         width: 380px;
     }
 }
 
-@media (max-width: 500px){
-    body{
+@media (max-width: 500px) {
+    body {
         width: 100%;
         margin: auto;
     }
@@ -223,13 +273,14 @@ body{
         gap: 10px;
         justify-content: center;
     }
+
     .other-movies {
         margin: auto;
         width: 380px;
     }
 
-    .movies img{
-    min-height: none;
+    .movies img {
+        min-height: none;
 
     }
 
@@ -237,21 +288,24 @@ body{
         margin: auto;
         width: 380px;
     }
-    .result a{
+
+    .result a {
         margin: 10px;
         width: 300px;
     }
+
     .div-search {
         min-width: none;
         width: 300px;
     }
-    .div-search .input{
+
+    .div-search .input {
         align-self: center;
         width: 100%;
     }
 }
 
-@media (max-width: 380px){
+@media (max-width: 380px) {
     header {
         flex-direction: column;
         width: 100%;
@@ -261,52 +315,61 @@ body{
     }
 
     .movies img {
-    min-height: 0px;
+        min-height: 0px;
 
     }
 
-    .logo{
+    .logo {
         font-size: 30px;
     }
+
     .div-search {
         margin-top: 10px;
         width: 100%;
     }
+
     .div-search .input {
         width: 100%;
+        padding: 6px;
+        font-size: 13px;
+    }
+
+    .div-search button {
         padding: 4px;
     }
-    .div-search button{
-        padding: 4px;
-    }
+
     .other-movies {
         margin-top: 20px;
         width: 80%;
     }
-    .other-movies a{
+
+    .other-movies a {
         width: 90%;
-        margin-bottom:10px ;
+        margin-bottom: 10px;
     }
-    .other-movies img{
+
+    .other-movies img {
         width: 90%;
         min-width: 100px;
 
     }
+
     .movies {
         width: 270px;
     }
 
     .result {
-        margin-top:20px ;
+        margin-top: 20px;
         gap: 20px;
         justify-content: center;
         width: 80%;
     }
+
     .result a {
         width: 80%;
     }
 
-    .result img{
+    .result img {
         margin: 0;
         width: 90%;
         min-width: 240px;

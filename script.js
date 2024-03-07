@@ -3,12 +3,30 @@ var  apiKeyTmdb = "e6a8c3a735702cbd286b2abcb9d6dc1a"
 var searchURL =  `https://api.themoviedb.org/3/search/movie?api_key=${apiKeyTmdb}&query=`
 
 
+const logo = document.querySelector(".logo")
+const show_search = document.querySelector('.show-search')
+const div_search = document.querySelector('.div-search')
+
 const input = document.querySelector(".input")
 
 const search = document.querySelector("#search")
 
 search.addEventListener('click', getDataMovies)
 
+var cont = 0
+
+show_search.addEventListener('click', () => {
+    cont++
+    if (cont %2 == 1){
+        div_search.classList.add('active')
+        input.focus()
+        logo.style.display ='none'
+
+    }else {
+        logo.style.display ='flex'
+        div_search.classList.remove('active')
+    }
+})
 
 
 async function pushJson(){
