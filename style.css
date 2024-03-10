@@ -26,6 +26,7 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    box-shadow: 0 12px 15px #3c3c3c;
 }
 
 
